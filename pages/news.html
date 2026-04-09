@@ -1,4 +1,4 @@
-   <!DOCTYPE html> 
+<!DOCTYPE html> 
 <html lang="en"> 
 
 <head>
@@ -7,6 +7,7 @@
     <title> Home - AES Literacy Institute </title>
     <meta name="description" content="Welcome to AES Literacy Institute, a non-profit organization dedicated to help adult learners of all kind, especially the underprivileged, to obtain the education and career training necessary to be self-sufficient in themselves mentally, academically and spiritually.">
     <link rel="icon" href="../images/AES-Logo-1.svg" type="image/svg+xml">
+
     <style>
 	/* Applies uniform resetting clean up to all elements */
         * {
@@ -66,8 +67,6 @@
         }
         
 
-
-
 	/* main body edits for visual */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -77,7 +76,8 @@
 	    
         }
 
-        /* Header Section */
+
+	/* Header Section */
         .header {
             background-color: var(--color-dark);
             color: var(--color-light);
@@ -85,130 +85,98 @@
             text-align: center;
         }
 
-	/* The size seting for the h1 within the header above the navigation */
         .header h1 {
             font-size: 48px;
             margin-bottom: 10px;
             font-weight: 700;
         }
 
-        /* The size setting for the p within the header above the navigation */
         .header p {
             font-size: 18px;
             color: var(--color-meteorite);
         }
 
 
+	/* News Section */
+	.news-section {
+		padding: 10px 20px;
+		background: var(--color-light);
+	}
+
+	.news-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 30px;
+		margin-top: 40px;
+	}
+
+	.news-card {
+		background: var(--color-light);
+		border-radius: 10px;
+		overflow: hidden;
+		box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+		transition: transform 0.3s ease;
+		border: 1px solid var(--color-gray-light);
+	}
+
+	.news-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+	}
+
+	.news-image {
+		width: 100%;
+		height: 250px;
+		background: var(--color-gray-light);
+		overflow: hidden;
+	}
+
+	.news-image img {
+		width: 100%;
+		height: 100%;
+		pbject-fit: cover;
+	}
 
 
-	/* Collection Images */
-	.gallery-section {
-    		max-width: 1170px;
-    		margin: 0 auto;
-    		padding: 70px 20px;
-  	}
+	.news-content {
+		padding: 25px; 
+	}
 
-  	.gallery-section h2 {
-    		font-size: 28px;
-    		color: var(--color-dark);
-    		margin-bottom: 30px;
-    		text-align: center;
-    		font-weight: 700;
-  	}
+	.news-date {
+		font-size: 12px;
+		color: var(--color-primary);
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+	}
 
-  	.gallery-grid {
-    		display: grid;
-    		grid-template-columns: 1fr 1fr 1fr;
-    		gap: 30px;
-    		margin-bottom: 30px;
-  	}
+	.news-card h3 {
+		font-size: 18px;
+		color: var(--color-dark);
+		margin: 12px 0;
+		line-height: 1.4;
+	}
 
-  	.gallery-item img {
-    		width: 100%;
-    		height: auto;
-    		border-radius: 12px;
-    		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  	}
+	.news-card p {
+		font-size: 14px;
+		color: var(--color-gray);
+		line-heightL 1.6;
+		margin-bottom: 15px;
+	}
 
-  	.gallery-description {
-    		text-align: center;
-    		font-size: 15px;
-    		color: var(--color-gray);
-    		line-height: 1.7;
-    		max-width: 800px;
-    		margin: 0 auto;
-  	}
+	.news-link {
+		color: var(--color-primary);
+		text-decoration: none;
+		font-weight: 600;
+		transition: color 0.3s ease;
+		display: inline-block;
+	}
 
+	.news-link: hover {
+		color: var(--color-primary-dark);
+	}
 
-	/*Gallery Styling Section */
-	 .gallery-container {
-            width: 100%;
-            min-height: 100vh;
-            background: #f9f9f9;
-            color: #333;
-            font-family: 'Arial', sans-serif;
-            overflow: hidden;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            padding: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .gallery-item {
-            background: #fff;
-            border-radius: 10px;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .gallery-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 10px 10px 0 0;
-        }
-
-        .gallery-item h3 {
-            font-size: 1.5rem;
-            margin: 20px 0 10px;
-            color: #673de6;
-            text-align: center;
-        }
-
-        .gallery-item p {
-            font-size: 1rem;
-            margin: 0 20px 20px;
-            color: #555;
-            text-align: center;
-        }
-
-        @media (max-width: 768px) {
-            .gallery-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 480px) {
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-
-
-
-
+      
 	/* Section Below Gallery */
 	.gallery-footer-section {
     		width: 100%;
@@ -265,9 +233,6 @@
     		margin-bottom: 20px;
 	}
         
-
-
-
 
 
 
@@ -332,6 +297,7 @@
 		filter: brightness(1.2);
 	}
         
+
 	/* Mobile Device Specifics */
 
         @media (max-width: 768px) {
@@ -368,11 +334,6 @@
 </head>
 <body> 
 
-
-
-
-
-
 <!-- Navigation -->
     <nav>
         <ul>
@@ -390,46 +351,140 @@
     <!-- Header Section -->
     <section class="header">
         <div class="container">
-            <h1>Diploma In a Box</h1>
-            <p>Sending earned diplomas for adults & youth. </p>
+            <h1> News </h1>
+            <p>Staying Updated with AES Latest news.</p>
         </div>
     </section>
 
 
+<!-- News Section -->
+<section class="news-section">
+    <div class="container">
+        <div class="news-grid">
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="news-image-1.jpg" alt="New Partnership Announcement">
+                </div>
+                <div class="news-content">
+                    <span class="news-date">March 1, 2026</span>
+                    <h3>New Partnership Launches Educational Initiative</h3>
+                    <p>We're excited to announce a new partnership that expands our reach to adult learners across the region, bringing educational resources and career guidance to thousands.</p>
+                    <a href="#" class="news-link">Read More →</a>
+                </div>
+            </div>
 
 
-    <!--Diploma in a Box Collection -->
-    <section class="gallery-section">
-	<h2> Our collection </h2>
-	<div class="gallery-grid">
-	<div class="gallery-item">
-		<img src="image1.jpg" alt="Gallery item 1">
-	</div>
-	<div class="gallery-item">
-		<img src="image1.jpg" alt="Gallery item 1">
-	</div>
-	<div class="gallery-item">
-		<img src="image1.jpg" alt="Gallery item 1">
-	</div>
-	</div>
 
-	<p class="gallery-description">
-		Discover our amazing collection of diploma-in-a-box collection designed with attributes of a graduate with quality and style in mind. 
-	</p>
 
-    </section>
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="news-image-2.jpg" alt="Success Stories">
+                </div>
+                <div class="news-content">
+                    <span class="news-date">February 28, 2026</span>
+                    <h3>Student Success Stories: From Doubt to Achievement</h3>
+                    <p>Meet three inspiring learners who overcame self-doubt and achieved their career goals through our mentorship and educational programs.</p>
+                    <a href="#" class="news-link">Read More →</a>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="news-image-2.jpg" alt="Success Stories">
+                </div>
+                <div class="news-content">
+                    <span class="news-date">February 28, 2026</span>
+                    <h3>Student Success Stories: From Doubt to Achievement</h3>
+                    <p>Meet three inspiring learners who overcame self-doubt and achieved their career goals through our mentorship and educational programs.</p>
+                    <a href="#" class="news-link">Read More →</a>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="news-image-2.jpg" alt="Success Stories">
+                </div>
+                <div class="news-content">
+                    <span class="news-date">February 28, 2026</span>
+                    <h3>Student Success Stories: From Doubt to Achievement</h3>
+                    <p>Meet three inspiring learners who overcame self-doubt and achieved their career goals through our mentorship and educational programs.</p>
+                    <a href="#" class="news-link">Read More →</a>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="news-image-2.jpg" alt="Success Stories">
+                </div>
+                <div class="news-content">
+                    <span class="news-date">February 28, 2026</span>
+                    <h3>Student Success Stories: From Doubt to Achievement</h3>
+                    <p>Meet three inspiring learners who overcame self-doubt and achieved their career goals through our mentorship and educational programs.</p>
+                    <a href="#" class="news-link">Read More →</a>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="news-image-3.jpg" alt="Workshop Series">
+                </div>
+                <div class="news-content">
+                    <span class="news-date">February 25, 2026</span>
+                    <h3>Spring Workshop Series Now Open for Registration</h3>
+                    <p>Join us for our upcoming spring workshops covering professional development, digital skills, and career advancement strategies. Limited spots available!</p>
+                    <a href="#" class="news-link">Read More →</a>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="news-image-3.jpg" alt="Workshop Series">
+                </div>
+                <div class="news-content">
+                    <span class="news-date">February 25, 2026</span>
+                    <h3>Spring Workshop Series Now Open for Registration</h3>
+                    <p>Join us for our upcoming spring workshops covering professional development, digital skills, and career advancement strategies. Limited spots available!</p>
+                    <a href="#" class="news-link">Read More →</a>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="news-image-3.jpg" alt="Workshop Series">
+                </div>
+                <div class="news-content">
+                    <span class="news-date">February 25, 2026</span>
+                    <h3>Spring Workshop Series Now Open for Registration</h3>
+                    <p>Join us for our upcoming spring workshops covering professional development, digital skills, and career advancement strategies. Limited spots available!</p>
+                    <a href="#" class="news-link">Read More →</a>
+                </div>
+            </div>
 	
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="news-image-3.jpg" alt="Workshop Series">
+                </div>
+                <div class="news-content">
+                    <span class="news-date">February 25, 2026</span>
+                    <h3>Spring Workshop Series Now Open for Registration</h3>
+                    <p>Join us for our upcoming spring workshops covering professional development, digital skills, and career advancement strategies. Limited spots available!</p>
+                    <a href="#" class="news-link">Read More →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
     <!-- Google Forms Section Below Gallery -->
 	<section class="gallery-footer-section">
     	<div class="gallery-footer-container">
-        <div class="gallery-footer-icon">🎓</div>
-        	<h3>Recent Graduate? Alumni? Or Proud Parent? </h3>
-        	<p>Order one of our diplomas for support of our graduates with the link below</p>
-        	<a href="https://forms.gle/YOUR_GOOGLE_FORM_LINK_HERE" target="_blank" class="gallery-footer-button"> Place An Order </a>
+        <div class="gallery-footer-icon">📰</div>
+        	<h3>AES Newsletters Subscription </h3>
+        	<p> Stay Up to date upon upcoming events, webinars contests and so much more!</p>
+        	<a href="https://forms.gle/YOUR_GOOGLE_FORM_LINK_HERE" target="_blank" class="gallery-footer-button"> Sign Up For Newsletters</a>
     	</div>
 	</section>
-
 
     <!-- Footer -->
     <footer>

@@ -1,12 +1,26 @@
-   <!DOCTYPE html> 
+<!--Structure and Language for the document-->
+<!DOCTYPE html> 
 <html lang="en"> 
 
+<!--Meta Data or data not seen by on UI(website on the internet) by user (You)-->
 <head>
+    <!--Character encode to UTF-8-->
     <meta charset="utf-8">
+
+    <!--Responsive for mobile devices-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Home - AES Literacy Institute </title>
+
+    <!--Tab Page Title Name-->
+    <title> Gallery - AES Literacy Institute </title>
+
+    <!--SEO Site Details-->
     <meta name="description" content="Welcome to AES Literacy Institute, a non-profit organization dedicated to help adult learners of all kind, especially the underprivileged, to obtain the education and career training necessary to be self-sufficient in themselves mentally, academically and spiritually.">
+
+    <!---Favicon or image next to Tab tage name-->
     <link rel="icon" href="../images/AES-Logo-1.svg" type="image/svg+xml">
+
+
+    <!--CSS Style of the webpage-->
     <style>
 	/* Applies uniform resetting clean up to all elements */
         * {
@@ -66,8 +80,7 @@
         }
         
 
-
-
+   
 	/* main body edits for visual */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -97,48 +110,6 @@
             font-size: 18px;
             color: var(--color-meteorite);
         }
-
-
-
-
-	/* Collection Images */
-	.gallery-section {
-    		max-width: 1170px;
-    		margin: 0 auto;
-    		padding: 70px 20px;
-  	}
-
-  	.gallery-section h2 {
-    		font-size: 28px;
-    		color: var(--color-dark);
-    		margin-bottom: 30px;
-    		text-align: center;
-    		font-weight: 700;
-  	}
-
-  	.gallery-grid {
-    		display: grid;
-    		grid-template-columns: 1fr 1fr 1fr;
-    		gap: 30px;
-    		margin-bottom: 30px;
-  	}
-
-  	.gallery-item img {
-    		width: 100%;
-    		height: auto;
-    		border-radius: 12px;
-    		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  	}
-
-  	.gallery-description {
-    		text-align: center;
-    		font-size: 15px;
-    		color: var(--color-gray);
-    		line-height: 1.7;
-    		max-width: 800px;
-    		margin: 0 auto;
-  	}
-
 
 	/*Gallery Styling Section */
 	 .gallery-container {
@@ -172,6 +143,7 @@
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
         }
 
+
         .gallery-item img {
             width: 100%;
             height: 300px;
@@ -193,6 +165,47 @@
             text-align: center;
         }
 
+
+        /* Lightbox styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            font-size: 40px;
+            color: white;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .lightbox-close:hover {
+            color: #ff0000;
+        }
+
         @media (max-width: 768px) {
             .gallery-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -204,10 +217,6 @@
                 grid-template-columns: 1fr;
             }
         }
-
-
-
-
 
 	/* Section Below Gallery */
 	.gallery-footer-section {
@@ -265,10 +274,6 @@
     		margin-bottom: 20px;
 	}
         
-
-
-
-
 
 
 	/* Footer below everything */
@@ -331,7 +336,7 @@
 	.social-links a: hover img {
 		filter: brightness(1.2);
 	}
-        
+
 	/* Mobile Device Specifics */
 
         @media (max-width: 768px) {
@@ -364,16 +369,12 @@
             }
 	
         }
+
+
     </style>
 </head>
-<body> 
-
-
-
-
-
-
-<!-- Navigation -->
+<body>
+    <!-- Navigation -->
     <nav>
         <ul>
             <li><a href="../AES.html"> HOME </a></li>
@@ -387,46 +388,132 @@
         </ul>
     </nav>
 
+
     <!-- Header Section -->
     <section class="header">
         <div class="container">
-            <h1>Diploma In a Box</h1>
-            <p>Sending earned diplomas for adults & youth. </p>
+            <h1>Gallery Page</h1>
+            <p>We're passionate about creating exceptional experiences</p>
         </div>
     </section>
 
-
-
-
-    <!--Diploma in a Box Collection -->
-    <section class="gallery-section">
-	<h2> Our collection </h2>
-	<div class="gallery-grid">
-	<div class="gallery-item">
-		<img src="image1.jpg" alt="Gallery item 1">
-	</div>
-	<div class="gallery-item">
-		<img src="image1.jpg" alt="Gallery item 1">
-	</div>
-	<div class="gallery-item">
-		<img src="image1.jpg" alt="Gallery item 1">
-	</div>
-	</div>
-
-	<p class="gallery-description">
-		Discover our amazing collection of diploma-in-a-box collection designed with attributes of a graduate with quality and style in mind. 
-	</p>
-
+    <!--Gallery-->
+    <section class="gallery-container">
+        <div class="gallery-grid">
+            <div class="gallery-item" onclick="openLightbox('../images/6II_0993.jpg')">
+                <img src="../images/6II_0993.jpg" alt="Gallery Image 1">
+                <h3>First Name, Last Name</h3>
+                <p>Short description of image 1.</p>
+            </div>
+            <div class="gallery-item" onclick="openLightbox('../images/6II_1001.jpg')">
+                <img src="../images/6II_1001.jpg" alt="Gallery Image 2">
+                <h3>Image 2</h3>
+                <p>Short description of image 2.</p>
+            </div>
+            <div class="gallery-item" onclick="openLightbox('../images/6II_1056.jpg')">
+                <img src="../images/6II_1056.jpg" alt="Gallery Image 3">
+                <h3>Image 3</h3>
+                <p>Short description of image 3.</p>
+            </div>
+            <div class="gallery-item" onclick="openLightbox('../images/6II_1066.jpg')">
+                <img src="../images/6II_1066.jpg" alt="Gallery Image 4">
+                <h3>Image 4</h3>
+                <p>Short description of image 4.</p>
+            </div>
+            <div class="gallery-item" onclick="openLightbox('../images/6II_1073.jpg')">
+                <img src="../images/6II_1073.jpg" alt="Gallery Image 5">
+                <h3>Image 5</h3>
+                <p>Short description of image 5.</p>
+            </div>
+            <div class="gallery-item" onclick="openLightbox('../images/6II_1086.jpg')">
+                <img src="../images/6II_1086.jpg" alt="Gallery Image 6">
+                <h3>Image 6</h3>
+                <p>Short description of image 6.</p>
+            </div>
+            <div class="gallery-item" onclick="openLightbox('../images/6II_1790-XL.jpg')">
+                <img src="../images/6II_1790-XL.jpg" alt="Gallery Image 7">
+                <h3>Image 7</h3>
+                <p>Short description of image 7.</p>
+            </div>
+            <div class="gallery-item" onclick="openLightbox('../images/6II_1812-XL.jpg')">
+                <img src="../images/6II_1812-XL.jpg" alt="Gallery Image 5">
+                <h3>Image 5</h3>
+                <p>Short description of image 5.</p>
+            </div>
+            <div class="gallery-item" onclick="openLightbox('../images/6II_0997.jpg')">
+                <img src="../images/6II_0997.jpg" alt="Gallery Image 6">
+                <h3>Image 6</h3>
+                <p>Short description of image 6.</p>
+            </div>
+            <div class="gallery-item" onclick="openLightbox('../images/6II_1013.jpg')">
+                <img src="../images/6II_1013.jpg" alt="Gallery Image 4">
+                <h3>Image 4</h3>
+                <p>Short description of image 4.</p>
+            </div>
+            <div class="gallery-item"  onclick="openLightbox('../images/6II_1060.jpg')">
+                <img src="../images/6II_1060.jpg" alt="Gallery Image 5">
+                <h3>Image 5</h3>
+                <p>Short description of image 5.</p>
+            </div>
+            <div class="gallery-item"  onclick="openLightbox('../images/6II_1069.jpg')">
+                <img src="../images/6II_1069.jpg" alt="Gallery Image 6">
+                <h3>Image 6</h3>
+                <p>Short description of image 6.</p>
+            </div>
+            <div class="gallery-item"  onclick="openLightbox('../images/6II_1078.jpg')">
+                <img src="../images/6II_1078.jpg" alt="Gallery Image 4">
+                <h3>Image 4</h3>
+                <p>Short description of image 4.</p>
+            </div>
+            <div class="gallery-item"  onclick="openLightbox('../images/6II_1196.jpg')">
+                <img src="../images/6II_1196.jpg" alt="Gallery Image 5">
+                <h3>Image 5</h3>
+                <p>Short description of image 5.</p>
+            </div>
+            <div class="gallery-item"  onclick="openLightbox('../images/6II_1810-X2.jpg')">
+                <img src="../images/6II_1810-X2.jpg" alt="Gallery Image 6">
+                <h3>Image 6</h3>
+                <p>Short description of image 6.</p>
+            </div>
+        </div>
     </section>
-	
 
+    <!-- Lightbox Popup -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <img src="" alt="Enlarged view" id="lightbox-img">
+    </div>
+
+    <!-- Internal JavaScript -->
+    <script>
+        function openLightbox(imgSrc) {
+            // Show the lightbox
+            document.getElementById('lightbox').classList.add('active');
+            
+            // Set the image source
+            document.getElementById('lightbox-img').src = imgSrc;
+        }
+
+        function closeLightbox() {
+            // Hide the lightbox
+            document.getElementById('lightbox').classList.remove('active');
+        }
+
+        // Close lightbox when clicking outside the image
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+    </script>
+	
     <!-- Google Forms Section Below Gallery -->
 	<section class="gallery-footer-section">
     	<div class="gallery-footer-container">
-        <div class="gallery-footer-icon">🎓</div>
-        	<h3>Recent Graduate? Alumni? Or Proud Parent? </h3>
-        	<p>Order one of our diplomas for support of our graduates with the link below</p>
-        	<a href="https://forms.gle/YOUR_GOOGLE_FORM_LINK_HERE" target="_blank" class="gallery-footer-button"> Place An Order </a>
+        <div class="gallery-footer-icon">📸</div>
+        	<h3>Share Your AES Moments</h3>
+        	<p>Upload your photos from AES events and help us celebrate our community!</p>
+        	<a href="https://forms.gle/YOUR_GOOGLE_FORM_LINK_HERE" target="_blank" class="gallery-footer-button"> Upload Image to Google Forms</a>
     	</div>
 	</section>
 
